@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:serif;
+}
+:root{
+    --main-bg:#1e272e;
+    --main-color:#0096e7;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    margin: 0;
+}
+.main_menu{
+    background-color: var(--main-bg);
+}
+.navbar li {
+    margin-left: 2rem;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar{
+    color:#fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.navbar-toggler{
+    background-color:gray;
+    
+}
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color:var(--main-color);
+}
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.main_header_left{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main_header_left p{
+    font-size: 3rem;
+    color: rgb(0, 255, 149);
+}
+.main_header_left h1{
+    font-size: 4rem;
+    margin-right: 1rem 0 4rem 0;
+    padding-bottom: 25px;
+    text-transform: capitalize;
+}
+.main_header_left .text_clr{
+    color: var(--main-color);
+}
+.main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px black;
+    outline: none;
+}
+.main_header_left button:hover{
+    background-color: black;
+    color: white;
+}
+.main_header_right{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+footer{
+    width: 100%;
+    background-color: var( --main-bg);
+    margin-top: auto;
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.7rem;
+    line-height: 5rem;
+}
+.carousel-item img{
+    height: 40rem;
+  
+}
+@media (max-width:768px) {
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+    }
+    .main_header_left p{
+        font-size: 2rem;
+    }
+    .carousel-item img{
+        height: 20rem;
+      
+    }
+}
+.navbar-brand{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    
+}
+.errimg img{
+    width: 60rem;
+    height: 30rem;
+}
+
+/*  weather design */
+.tempInfo{
+    width: 40%;
+    margin: auto;
+    min-height: 20rem;
+    background-color: #323544;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: 'Roboto',sans-serif;
+}
+.topLayer{
+    width: 100%;
+    height: 22%;
+    background-color:gold ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    
+}
+.topLayer p{
+    color: rgb(54, 19, 151);
+    font-weight: 300;
+    padding: 2rem 0;
+    font-size: 2rem;
+}
+.mainLayer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.mainLayer #city_name{
+    padding: 2rem 0;
+    color:#bfc1c8 ;
+    font-weight: 300;
+    font-size: 3rem;
+}
+.mainLayer .middleLayer{
+    display: flex;
+    justify-content: space-around;
+    color:#fff;
+}
+.mainLayer .middleLayer p,
+.mainLayer .middleLayer .fa{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.fa{
+    color: #0096e7;
+}
+sup{
+    font-size: 5rem;
+    margin-top: -2rem;
+}
+.data_hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+.temp_form{
+    width: 60%;
+    position: relative;
+  
+    margin: 10rem auto 6rem;
+
+}
+.temp_form input[type='text']{
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+    background-color: #1e202b;
+    color: white;
+    outline: none;
+    border: none;
+    font-size:2.7rem;
+    border-radius: 3rem;
+    
+}
+::placeholder{
+    color: #bfc1c8;
+    font-size: 2rem;
+}
+.temp_form input[type='submit']{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background: #009ad8;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: white;
+    font-size: 2rem;
+}
+.temp_form input[type='submit']:hover{
+    background-color: white;
+    color: #009ad8;
+}
+@media (max-width:768px){
+    .tempInfo{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+   .temp_form{
+       width: 100%;
+   }
+   .temp_form input[type='submit']{
+    border-radius: 2rem;
+    padding: 0 1rem;
+   }
+   .mainLayer .middleLayer p,
+   .mainLayer .middleLayer .fa{
+       font-size: 4rem;}
+    sup{
+        font-size: 3rem;
+        
+    }
+}
